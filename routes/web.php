@@ -27,6 +27,8 @@ Route::get('/modificar-pintor', [PintorController::class, 'update'])
 Route::get('/borrar-primer-pintor', [PintorController::class, 'remove'])
 ->name('eliminar');
 
+Route::get('/autores', [PintorController::class, 'autores']);
+
 // Pintura Controller
 Route::get('/agregar-pinturas', [PinturaController::class, 'add'])
 ->name('añadir');

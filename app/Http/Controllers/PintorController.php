@@ -61,4 +61,10 @@ class PintorController extends Controller
         $pintor->delete();
     }
 
+    public function autores() {
+    $pintores = Pintor::all();
+
+    return view('autores', compact('pintores'));
+    }
+
 }
