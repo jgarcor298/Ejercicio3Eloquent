@@ -34,6 +34,9 @@ Route::get('/agregar-pinturas', [PinturaController::class, 'add'])
 Route::get('/mostrar-pinturas', [PinturaController::class, 'present'])
 ->name('presentar');
 
+Route::get('/galeria', [PinturaController::class, 'galeria']);
+
+
 // Relacion1N Controller
 Route::get('/pinturas-velazquez', [Relacion1NController::class, 'read'])
     ->name('leer');

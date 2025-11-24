@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->foreignId('pintor_id')->constrained();
+            $table->string('imagen')->nullable();
 
             $table->timestamps();
         });
