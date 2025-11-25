@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.autores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.tarjeta-autor {
+    background: white;
+    width: 260px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tarjeta-autor:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta-autor img {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.tarjeta-autor h3 {
+    margin: 12px 0 5px;
+    color: #222;
+}
+
+.tarjeta-autor p {
+    color: #555;
+    font-size: 14px;
+}

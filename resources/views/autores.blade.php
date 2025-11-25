@@ -2,19 +2,20 @@
 <html>
 <head>
     <title>Autores del Museo</title>
+    <link rel="stylesheet" href="{{ asset('css/stylesAutores.css') }}">
 </head>
+
 <body>
     <h1>Autores del Museo</h1>
 
-    <div style="display: flex; flex-wrap: wrap;">
+    <div class="autores">
         @foreach($pintores as $pintor)
-            <div style="margin: 20px; text-align: center;">
+            <div class="tarjeta-autor">
 
-                {{-- Mostrar imagen --}}
-                <img src="{{ asset($pintor->imagen) }}" width="200" style="border:1px solid #000;">
+                <img src="{{ asset($pintor->imagen) }}" width="200">
 
                 <h3>{{ $pintor->nombre }}</h3>
-                <p>Biografia: {{ $pintor->bio }}</p>
+                <p>Biografía: {{ $pintor->bio }}</p>
 
             </div>
         @endforeach

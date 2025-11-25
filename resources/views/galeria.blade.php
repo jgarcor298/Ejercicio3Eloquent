@@ -2,21 +2,20 @@
 <html>
 <head>
     <title>Galería del Museo</title>
+    <link rel="stylesheet" href="{{ asset('css/stylesGaleria.css') }}">
+
 </head>
 <body>
     <h1>Galería de Pinturas</h1>
 
-    <div style="display: flex; flex-wrap: wrap;">
+    <div class="galeria">
         @foreach($pinturas as $pintura)
-            <div style="margin: 20px; text-align: center;">
-                
-                {{-- Mostrar imagen --}}
-                <img src="{{ asset($pintura->imagen) }}" width="250" style="border:1px solid #000;">
+            <div class="tarjeta">
+                <img src="{{ asset($pintura->imagen) }}">
 
                 <h3>{{ $pintura->titulo }}</h3>
-                <p>Año: {{ $pintura->anio }}</p>
-                <p>Pintor ID: {{ $pintura->pintor_id }}</p>
-
+                
+                <p>Pintor: {{ $pintura->pintor?->nombre }}</p>
             </div>
         @endforeach
     </div>
